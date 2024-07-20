@@ -43,6 +43,8 @@ sum(count_over_time({job="generated-logs"} | json |= `transaction_id` [$__interv
 ### Tools generate log to json
 this tools is to convert text model log to json model log and generate it. sample raw log on sample.log file and the generate output on generated.log file (after you run the tools)
 
+note: on this tools i don't extract relevant metrics at point 2 Log Parsing and Transformation because it will provided by grafana & loki.
+
 
 ## how to run tools
 1. `go run main.go` <br>
@@ -51,6 +53,7 @@ generate.log file will be generate <br>
 
 ## how to deploy grafana loki 
 1. `cd loki` <br> 
+2. run step *how to run tools*
 2. `docker-compose up -d`
 
 Simply run docker-compose up and all the components will start.
