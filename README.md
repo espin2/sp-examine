@@ -78,18 +78,18 @@ Grafana runs on port 3000, and there are Loki & Prometheus datasources enabled b
 
 
 ## Dashboard logging
-![Dashboard logging](images/show_dashboard.png)
+![Dashboard logging](image/show_dashboard.png)
 ## show all logs on grafana explore
-![show all logs on grafana explore](images/show_all_logs.png)
+![show all logs on grafana explore](image/show_all_logs.png)
 
 ## show log label on grafana explore
-![show log label on grafana explore](images/show_filter_logs1.png)
+![show log label on grafana explore](image/show_filter_logs1.png)
 
 ## show filter log by response code on grafana explore
-![show filter log by response code on grafana explore](images/show_filter_logs2.png)
+![show filter log by response code on grafana explore](image/show_filter_logs2.png)
 
 ## show alert error rate 
-![show alert error rate ](images/alert.png)
+![show alert error rate ](image/alert.png)
 
 
 
