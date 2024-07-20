@@ -1,0 +1,36 @@
+route:
+  receiver: 'null'
+  group_wait: 1s
+  group_interval: 1s
+  group_by: 
+  - severity
+  - alert_type
+  - service_name
+  - status_code
+  - user_id
+  - transaction_id
+  routes:
+  - match:
+      alert_type: error_rate
+    receiver: testing-alert
+
+receivers:
+    - name: "null"
+
+    - name: "slack-template"
+      slack_configs:
+      - &alert_receiver_template_slack
+        channel: '#alert-infra-service'
+        fallback: '{{ template "slack.default.fallback" . }}'
+        pretext: '{{ .CommonAnnotations.summary }}'
+        api_url: 'https://hooks.slack.com/services/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'
+        username: '{{ template "slack.default.username" . }}'
+        send_resolved: true
+        icon_url: https://pbs.twimg.com/media/ECJ3rdUVUAAVIa8.jpg
+
+    - name: testing-alert
+      slack_configs:
+      - <<: *alert_receiver_template_slack
+        channel: '#testing-alert'
+        api_url: 'https://hooks.slack.com/services/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'
+        text: '{{ .CommonAnnotations.message }}'

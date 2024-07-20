@@ -1,0 +1,14 @@
+groups:
+  - name: error_rate
+    # interval: 5s
+    rules:
+      - alert: LokiHighErrorRate
+        for: 1s
+        expr: |
+          sum(rate({job="generated-logs", status_code=~"4..|5.."} | json [5m])) / sum(rate({job="generated-logs"}[5m])) > 0.1
+        labels:
+          alert_type: "error_rate"
+          severity: "critical"
+        annotations:
+            summary: "Loki error per minute rate > 0.1"
+            message: "Loki total error per minute rate all service > 0.1"
