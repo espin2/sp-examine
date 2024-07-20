@@ -44,30 +44,30 @@ this tools is to convert text model log to json model log and generate it. sampl
 
 
 ## how to run tools
-1. go run main.go <br>
+1. `go run main.go` <br>
 2. generate.log file will be generate <br>
 
 ## how to deploy grafana loki 
-1. cd loki <br>
-2. docker-compose up -d
+1. `cd loki` <br> 
+2. `docker-compose up -d`
 
 ## import dashboard
 1. go to menu Dashboard -> button import -> upload JSON file Log on config/Visualization-1721451445333.json
 
 
 ## Dashboard logging
-![dashboard logging ](images/show_dashboard.png)
+!(images/show_dashboard.png)
 ## show all logs on grafana explore
-![all logs](images/show_all_logs.png)
+!(images/show_all_logs.png)
 
 ## show log label on grafana explore
-![all logs label](images/show_filter_logs1.png)
+!(images/show_filter_logs1.png)
 
 ## show filter log by response code on grafana explore
-![logs label filter](images/show_filter_logs2.png)
+!(images/show_filter_logs2.png)
 
 ## show alert error rate 
-![logs label filter](images/alert.png)
+!(images/alert.png)
 
 
 
