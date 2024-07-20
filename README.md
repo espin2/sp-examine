@@ -54,7 +54,7 @@ generate.log file will be generate <br>
 ## how to deploy grafana loki 
 1. `cd loki` <br> 
 2. run step *how to run tools*
-3. change '<your incoming webhook slack>` on config/alertmanager.yaml to your incoming webhook slack
+3. change <your incoming webhook slack> on config/alertmanager.yaml to your incoming webhook slack
 4. `docker-compose up -d`
 
 Simply run docker-compose up and all the components will start.
