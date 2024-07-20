@@ -13,15 +13,15 @@
 Loki is a log aggregation system designed by Grafana Labs that is optimized for cost-effective operation and scalability. It is often compared to other log management solutions like Elasticsearch, Splunk, and the ELK stack. <br>
 
 *Pros* 
-1. Cost-Effective: Loki only indexes metadata such as labels and keeps the logs themselves in cloud storage like AWS S3 or GCS, significantly reducing storage costs. <br>
-2. Scalable: Loki is designed to scale horizontally, making it suitable for handling large volumes of logs from multiple sources without significant performance degradation. <br>
-3. Integration with Grafana: Loki integrates seamlessly with Grafana, providing powerful visualization capabilities and allowing users to create dashboards and alerts based on log data. <br>
-4. Label-Based Logging: Loki uses a label-based approach to organize and query logs, making it easier to filter and search logs by specific attributes (e.g., pod name, namespace, container). <br>
-5. Lightweight: Loki is designed to be lightweight, consuming fewer resources compared to traditional logging solutions like the ELK stack. <br>
+1. **Cost-Effective:** Loki only indexes metadata such as labels and keeps the logs themselves in cloud storage like AWS S3 or GCS, significantly reducing storage costs. <br>
+2. **Scalable:** Loki is designed to scale horizontally, making it suitable for handling large volumes of logs from multiple sources without significant performance degradation. <br>
+3. **Integration with Grafana:** Loki integrates seamlessly with Grafana, providing powerful visualization capabilities and allowing users to create dashboards and alerts based on log data. <br>
+4. **Label-Based Logging:** Loki uses a label-based approach to organize and query logs, making it easier to filter and search logs by specific attributes (e.g., pod name, namespace, container). <br>
+5. **Lightweight:** Loki is designed to be lightweight, consuming fewer resources compared to traditional logging solutions like the ELK stack. <br>
 
 *Cons*
-1. Limited Indexing: Loki only indexes metadata (labels) and not the full text of the logs. While this is good for reducing storage costs, it can limit search capabilities if you need full-text search. <br>
-2. Performance: In some cases, Loki's performance for complex queries might not match the performance of more mature log management systems that index the full text of logs. <br>
+1. **Limited Indexing:** Loki only indexes metadata (labels) and not the full text of the logs. While this is good for reducing storage costs, it can limit search capabilities if you need full-text search. <br>
+2. **Performance:** In some cases, Loki's performance for complex queries might not match the performance of more mature log management systems that index the full text of logs. <br>
 
 ### Query logql
 
@@ -54,7 +54,8 @@ generate.log file will be generate <br>
 ## how to deploy grafana loki 
 1. `cd loki` <br> 
 2. run step *how to run tools*
-2. `docker-compose up -d`
+3. change '<your incoming webhook slack>` on config/alertmanager.yaml to your incoming webhook slack
+4. `docker-compose up -d`
 
 Simply run docker-compose up and all the components will start.
 
