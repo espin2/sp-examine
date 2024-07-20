@@ -23,7 +23,7 @@ receivers:
         channel: '#testing-alert'
         fallback: '{{ template "slack.default.fallback" . }}'
         pretext: '{{ .CommonAnnotations.summary }}'
-        api_url: 'https://hooks.slack.com/services/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'
+        api_url: '<your incoming webhook slack'
         username: '{{ template "slack.default.username" . }}'
         send_resolved: true
         icon_url: https://pbs.twimg.com/media/ECJ3rdUVUAAVIa8.jpg
@@ -32,5 +32,5 @@ receivers:
       slack_configs:
       - <<: *alert_receiver_template_slack
         channel: '#testing-alert'
-        api_url: 'https://hooks.slack.com/services/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'
+        api_url: '<your incoming webhook slack'
         text: '{{ .CommonAnnotations.message }}'

@@ -7,6 +7,7 @@
 4. ./loki/config/: configuration related to deploy loki
 5. ./main.go: tools log generator to json
 6. ./sample.log: sample of log
+7. ./generated.log.example: example of generated log
 
 ### Grafana Loki
 Loki is a log aggregation system designed by Grafana Labs that is optimized for cost-effective operation and scalability. It is often compared to other log management solutions like Elasticsearch, Splunk, and the ELK stack. <br>
@@ -45,7 +46,8 @@ this tools is to convert text model log to json model log and generate it. sampl
 
 ## how to run tools
 1. `go run main.go` <br>
-2. generate.log file will be generate <br>
+
+generate.log file will be generate <br>
 
 ## how to deploy grafana loki 
 1. `cd loki` <br> 
@@ -70,7 +72,6 @@ Grafana runs on port 3000, and there are Loki & Prometheus datasources enabled b
 - [Minio](https://min.io/) for S3-compatible storage for chunks & indexes
 - nginx gateway which acts as a reverse-proxy to the read/write paths
 - Promtail for logs
-  - An optional log-generator
 - Multi-tenancy enabled (`docker` as the tenant ID)
 
 ## import dashboard
