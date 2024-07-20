@@ -64,18 +64,17 @@ All data will be stored in the .data directory.
 
 The nginx gateway runs on port 8080 and you can access Loki through it.
 
-Prometheus runs on port 9090, and you can access all metrics from Loki & Promtail here.
-
 Grafana runs on port 3000, and there are Loki & Prometheus datasources enabled by default.
 
-### Component grafana loki
+### Component 
 
-- Running in [Simple Scalable Deployment](https://grafana.com/docs/loki/latest/fundamentals/architecture/deployment-modes/#simple-scalable-deployment-mode) mode with 3 replicas for `read` and `write` targets
+- Running in [Simple Scalable Deployment](https://grafana.com/docs/loki/latest/fundamentals/architecture/deployment-modes/#simple-scalable-deployment-mode) mode with 1 replicas for `read` and `write` targets
 - Memberlist for [consistent hash](https://grafana.com/docs/loki/latest/fundamentals/architecture/rings/) ring
 - [Minio](https://min.io/) for S3-compatible storage for chunks & indexes
 - nginx gateway which acts as a reverse-proxy to the read/write paths
 - Promtail for logs
 - Multi-tenancy enabled (`docker` as the tenant ID)
+- alertmanager to slack 
 
 ## import dashboard
 1. go to menu Dashboard -> button import -> upload JSON file Log on config/Visualization-1721451445333.json <br>
