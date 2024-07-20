@@ -43,7 +43,7 @@ sum(count_over_time({job="generated-logs"} | json |= `transaction_id` [$__interv
 ### Tools generate log to json
 this tools is to convert text model log to json model log and generate it. sample raw log on sample.log file and the generate output on generated.log file (after you run the tools)
 
-note: on this tools i don't extract relevant metrics at point 2 Log Parsing and Transformation because it will provided by grafana & loki.
+note: on this tools i don't extract relevant metrics at point 2 *Log Parsing and Transformation* because it will provided by grafana & loki.
 
 
 ## how to run tools
@@ -78,7 +78,7 @@ Grafana runs on port 3000, and there are Loki & Prometheus datasources enabled b
 - Multi-tenancy enabled (`docker` as the tenant ID)
 
 ## import dashboard
-1. go to menu Dashboard -> button import -> upload JSON file Log on config/Visualization-1721451445333.json
+1. go to menu Dashboard -> button import -> upload JSON file Log on config/Visualization-1721451445333.json <br>
 
 
 ## Dashboard logging
