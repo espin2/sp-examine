@@ -63,6 +63,8 @@ Prometheus runs on port 9090, and you can access all metrics from Loki & Promtai
 
 Grafana runs on port 3000, and there are Loki & Prometheus datasources enabled by default.
 
+### Component grafana loki
+
 - Running in [Simple Scalable Deployment](https://grafana.com/docs/loki/latest/fundamentals/architecture/deployment-modes/#simple-scalable-deployment-mode) mode with 3 replicas for `read` and `write` targets
 - Memberlist for [consistent hash](https://grafana.com/docs/loki/latest/fundamentals/architecture/rings/) ring
 - [Minio](https://min.io/) for S3-compatible storage for chunks & indexes
@@ -76,18 +78,18 @@ Grafana runs on port 3000, and there are Loki & Prometheus datasources enabled b
 
 
 ## Dashboard logging
-!(images/show_dashboard.png)
+![Dashboard logging](images/show_dashboard.png)
 ## show all logs on grafana explore
-!(images/show_all_logs.png)
+![show all logs on grafana explore](images/show_all_logs.png)
 
 ## show log label on grafana explore
-!(images/show_filter_logs1.png)
+![show log label on grafana explore](images/show_filter_logs1.png)
 
 ## show filter log by response code on grafana explore
-!(images/show_filter_logs2.png)
+![show filter log by response code on grafana explore](images/show_filter_logs2.png)
 
 ## show alert error rate 
-!(images/alert.png)
+![show alert error rate ](images/alert.png)
 
 
 
