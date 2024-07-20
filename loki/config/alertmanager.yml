@@ -20,7 +20,7 @@ receivers:
     - name: "slack-template"
       slack_configs:
       - &alert_receiver_template_slack
-        channel: '#alert-infra-service'
+        channel: '#testing-alert'
         fallback: '{{ template "slack.default.fallback" . }}'
         pretext: '{{ .CommonAnnotations.summary }}'
         api_url: 'https://hooks.slack.com/services/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'
