@@ -1,13 +1,13 @@
 ## Introduction
 
 ### Folder Structure
-1. ./image: list of all images png
-2. ./loki: all stuff about loki
-3. ./loki/alert-rules: loki configuration for alert
-4. ./loki/config/: configuration related to deploy loki
-5. ./main.go: tools log generator to json
-6. ./sample.log: sample of log
-7. ./generated.log.example: example of generated log
+1. `./image`: list of all images png
+2. `./loki`: all stuff about loki
+3. `./loki/alert-rules/`: loki configuration for alert
+4. `./loki/config/`: configuration related to deploy loki
+5. `./main.go`: tools log generator to json
+6. `./sample.log`: sample of log
+7. `./generated.log.example`: example of generated log
 
 ### Grafana Loki
 Loki is a log aggregation system designed by Grafana Labs that is optimized for cost-effective operation and scalability. It is often compared to other log management solutions like Elasticsearch, Splunk, and the ELK stack. <br>
